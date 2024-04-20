@@ -456,3 +456,8 @@ i:hover {
     padding: 10px;
   }
 }
+@media (max-width: 600px) {
+  .card-content {
+    width: 75%;
+  }
+}
