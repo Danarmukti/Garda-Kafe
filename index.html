@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav container">
+        <!-- logo -->
+        <a href="#" class="logo">Kantin Garda <span>Juara</span></a>
+      </div>
+    </header>
+
+    <!-- filter -->
+    <div class="post-filter container">
+      <span class="filter-item active-link" data-filter="all">All</span>
+      <span class="filter-item" data-filter="makan">Makanan</span>
+      <span class="filter-item" data-filter="minum">Minuman</span>
+      <span class="filter-item" data-filter="cemilan">Cemilan</span>
+    </div>
+
+    <!-- Card-menu -->
+    <section>
+      <div class="menu-section container">
+        <div class="card">
+          <!-- Menu 1 -->
+          <div class="card-content makan">
+            <img src="img/mie-goreng.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Mie Goreng</h2>
+            <p class="card-text">Harga :<span class="price">10.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">10</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 2 -->
+          <div class="card-content makan">
+            <img src="img/mie-rebus.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Mie Rebus</h2>
+            <p class="card-text">Harga : <span class="price">10.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">15</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 3 -->
+          <div class="card-content minum">
+            <img src="img/ice-cappucino.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Es Kapucino</h2>
+            <p class="card-text">Harga : <span class="price">10.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">4</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 4 -->
+          <div class="card-content minum">
+            <img src="img/teh-manis-panas.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Teh Manis Panas</h2>
+            <p class="card-text">Harga : <span class="price">4.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">15</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 5 -->
+          <div class="card-content minum">
+            <img src="img/es-teh-manis.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Es Teh Manis</h2>
+            <p class="card-text">Harga : <span class="price">4.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">7</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus" onclick="addQty()">
+                +
+              </button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 6 -->
+          <div class="card-content minum">
+            <img src="img/aqua-600ml.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Aqua 600ml</h2>
+            <p class="card-text">Harga : <span class="price">4.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">5</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 7 -->
+          <div class="card-content minum">
+            <img src="img/aqua-1.5L.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Aqua 1.5L</h2>
+            <p class="card-text">Harga : <span class="price">7.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value">20</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 8 -->
+          <div class="card-content cemilan">
+            <img src="img/french-fries.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Kentang goreng</h2>
+            <p class="card-text">Harga : <span class="price">15.000</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">15</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+          <!-- Menu 9 -->
+          <div class="card-content cemilan">
+            <img src="img/pudding-coklat.jpg" alt="" class="card-img" />
+            <h2 class="card-title">Pudding coklat</h2>
+            <p class="card-text">Harga : <span class="price">5.500</span></p>
+            <p class="card-text">
+              stok : <span class="stok max-value" id="stok">10</span>
+            </p>
+            <div class="button-container">
+              <button class="button minus" id="btn-Minus">-</button>
+              <span id="qty-count" class="qty">0</span>
+              <button class="button plus" id="btn-Plus">+</button>
+              <button class="button-add" id="btn-add">tambah</button>
+            </div>
+          </div>
+        </div>
+        <!-- result -->
+        <div class="resume">
+          <div class="resume-header">
+            <span>Nama</span>
+            <span>qty</span>
+            <span>Price</span>
+            <div class="resume-text">
+              <ol type="1" class="list">
+                <!-- akan muncul ketika pencet salah satu tambah pada menu -->
+              </ol>
+            </div>
+          </div>
+          <div class="resume-total">
+            <label for="total" class="resume-text-total">Total : </label>
+            <input type="text" id="total" class="total-result" value="" />
+            <span class="pesan-container">
+              <button class="total-button pesan">Pesan</button>
+              <button class="total-button batal">Batal</button>
+            </span>
+          </div>
+        </div>
+        <div class="resume-web">
+          <div class="resume-header">
+            <span>Nama</span>
+            <span>qty</span>
+            <span>Price</span>
+            <div class="resume-text">
+              <ol type="1" class="list">
+                <!-- akan muncul ketika pencet salah satu tambah pada menu -->
+              </ol>
+            </div>
+          </div>
+          <div class="resume-total">
+            <label for="total" class="resume-text-total">Total : </label>
+            <input type="text" id="total" class="total-result" value="" />
+            <span class="pesan-container">
+              <button class="total-button pesan">Pesan</button>
+              <button class="total-button batal">Batal</button>
+            </span>
+          </div>
+        </div>
+        <div class="pesan-logo">
+          <i class="bx bxs-food-menu"></i>
+          <span class="notif"></span>
+        </div>
+      </div>
+    </section>
+    <audio id="notif-sound">
+      <source src="sound/notif-sound.mp3" type="audio/mp3" />
+    </audio>
+
+    <footer>
+      <div class="footer container">
+        <!-- logo -->
+        <span class="link"
+          >Contact Us : <a href="#"><i class="bx bxl-whatsapp"></i></a
+        ></span>
+
+        <a href="#" class="logo">© Garda <span>Juara</span></a>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+  </body>
+</html>
