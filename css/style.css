@@ -324,10 +324,11 @@ i:hover {
     flex-direction: column;
   }
   .resume {
-    display: block;
+    display: none;
   }
   .resume-web {
-    display: none;
+    margin-right: 30px;
+    display: block;
   }
   .card {
     width: 75%;
@@ -338,17 +339,19 @@ i:hover {
     align-items: center;
     justify-content: center;
   }
+
   .card {
     justify-content: center;
   }
   .total-result {
+    width: 80%;
     margin-left: 2px;
   }
   .total-button {
     width: 80px;
   }
   .pesan-logo {
-    display: block;
+    display: none;
   }
 }
 @media (max-width: 950px) {
@@ -382,6 +385,9 @@ i:hover {
   /* .resume {
     display: none;
   } */
+  .card-content {
+    width: 250px;
+  }
   .resume {
     display: none;
     background: var(--bg-color);
@@ -389,6 +395,9 @@ i:hover {
     left: 3rem;
     top: 6rem;
     display: absolute;
+  }
+  .resume-web {
+    display: none;
   }
   .close-resume {
     display: none;
@@ -407,6 +416,9 @@ i:hover {
   }
   .card-content {
     width: 300px;
+  }
+  .pesan-logo {
+    display: block;
   }
 }
 @media (max-width: 768px) {
@@ -433,7 +445,7 @@ i:hover {
     margin: 0 auto;
   }
   .card-content {
-    width: 260px;
+    width: 220px;
   }
   footer span.link {
     font-size: 0.85rem;
