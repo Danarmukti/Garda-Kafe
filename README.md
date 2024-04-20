@@ -4,4 +4,4 @@ i made it for 1 week and there is it, this is not completed yet, i need still to
 
 </p>
 
-<h2>©DanarCode</h2>
+<h3>©DanarCode</h3>
